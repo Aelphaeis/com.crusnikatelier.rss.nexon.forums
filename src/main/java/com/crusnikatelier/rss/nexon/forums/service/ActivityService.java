@@ -10,7 +10,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.crusnikatelier.rss.Item;
-import com.crusnikatelier.rss.nexon.forums.Playground;
 
 public class ActivityService {
 	public static final String BASE_URL = "http://forum2.nexon.net/";
@@ -20,7 +19,7 @@ public class ActivityService {
 		List<Item> items = new ArrayList<Item>();
 		
 		Document document = Jsoup.connect(ENDPOINT)
-				.userAgent(Playground.class.getName()).get();
+				.userAgent(getClass().getName()).get();
 		
 		Element activityStream = document.body().getElementById("activitylist");
 		
