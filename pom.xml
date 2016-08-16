@@ -24,6 +24,19 @@
 		</dependency>
 	</dependencies>	
 	
+	<repositories>
+		<repository>
+			<id>maven-s3-release-repo</id>
+			<name>aws release repository</name>
+			<url>https://s3.amazonaws.com/repo.maven/release</url>
+		</repository>
+		<repository>
+			<id>maven-s3-snapshot-repo</id>
+			<name>aws snapshot repository</name>
+			<url>https://s3.amazonaws.com/repo.maven/snapshots</url>
+		</repository>
+	</repositories>
+	
 	<distributionManagement>
 		<repository>
 			<id>s3-maven-release-repo</id>
